@@ -1,6 +1,6 @@
 # Docker_goLang_multistage
 
-In the goLang based project the application is getting build in a Docker image using multistage build concept of docker which reduces the size of the our end artifcat to large amount. 
+In this goLang based project the application is getting build in a Docker image, using multistage build concept of docker. Now the size of the our end artifcat reduced to 12.7 Mb from 300-500Mb.
 
 # Prerequisite : 
 Install git and docker
@@ -23,7 +23,7 @@ As the application starts on local http server in the container
 		    WriteTimeout: 15 * time.Second,
 		    ReadTimeout:  15 * time.Second,
             
-to access this app on host we can run container by adding it on docker "host" network. But using HOST network we wont be able to access the applicatiobn form outside the host machine.
+to access this app on host one can run container by adding it on docker "host" network. But using HOST network you wont be able to access the applicatiobn form outside the host machine.
 
     $ docker run -d --name=golangapp_host --net "host"  puneetsingla/golangapp:v1 
     $ curl http://localhost:8000/ 
